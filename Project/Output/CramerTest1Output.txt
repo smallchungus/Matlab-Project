@@ -1,0 +1,7 @@
+determinant A = 4.100000e+01
+determinant A1 = 215
+determinant A2 = -5.300000e+01
+determinant A3 = -1.140000e+02
+x1 = 5.243902e+00
+x2 = -1.292683e+00
+x3 = -2.780488e+00

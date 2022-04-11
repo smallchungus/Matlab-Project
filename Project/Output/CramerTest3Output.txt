@@ -1,0 +1,7 @@
+determinant A = 40
+determinant A1 = -4.000000e+01
+determinant A2 = 40
+determinant A3 = -80
+x1 = -1.000000e+00
+x2 = 1
+x3 = -2

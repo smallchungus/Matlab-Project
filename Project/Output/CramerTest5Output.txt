@@ -1,0 +1,7 @@
+determinant A = -22
+determinant A1 = 22
+determinant A2 = -132
+determinant A3 = -22
+x1 = -1
+x2 = 6
+x3 = 1

@@ -1,0 +1,7 @@
+determinant A = -20
+determinant A1 = 60
+determinant A2 = 16
+determinant A3 = -12
+x1 = -3
+x2 = -8.000000e-01
+x3 = 6.000000e-01

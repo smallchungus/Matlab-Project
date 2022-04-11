@@ -30,10 +30,6 @@ function neville (myFile)
         for i=1:n
             cons(i,1)=data(1 + (n*n) + i);
         end
-
-        n
-        coef
-        cons
         
         % calculations according to cramer's rule
         det_A=det(coef);
