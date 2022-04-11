@@ -1,11 +1,5 @@
 function horner (myFile)
 
-    %FILENAME = 'TestHorner1.txt';
-    %FILENAME = 'TestHorner2.txt';
-    %FILENAME = 'TestHorner3.txt';
-    %FILENAME = 'TestHorner4.txt';
-    FILENAME = 'TestHorner5.txt';
-    
     %check if we typed in the correct file name
     if exist (myFile,'file') == 1
        disp('You typed in the wrong filename')

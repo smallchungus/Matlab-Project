@@ -1,7 +1,7 @@
-function NewtonHorner (file)
+function NewtonHorner (myFile)
     
     %check if we typed in the correct file name
-    if exist (FILENAME,'file') == 1
+    if exist (myFile,'file') == 1
       disp('You typed in the wrong filename')
     else
     
@@ -9,7 +9,7 @@ function NewtonHorner (file)
     %open data file and read from it
     %replace data1 with other data files.
     
-    openData = fopen(FILENAME);
+    openData = fopen(myFile);
     data = fscanf(openData,'%f');
     fclose(openData);
     
