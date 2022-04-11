@@ -1,5 +1,4 @@
 function neville (file)
-    clear
 
     FILENAME = 'TestNeville1.txt';
     %FILENAME = 'TestNeville2.txt';
@@ -25,19 +24,12 @@ function neville (file)
         % this is the array of points
         x = zeros(n+1, 1);
         y = zeros(n+1, 1);
-        for i = 1:((n+1))
-           x(i) = data(i);
-           y(i) = data(i+1);
+        for i = 1:n+1
+           x(i) = data(2*i);
+           y(i) = data((2*i)+1);
         %  fprintf('%g ', a(i));
         end
-        
-        x0 = data(1+(2*n)+1);
-        
-
-        n
-        x
-        y
-        x0
+        x0 = data(1+(2*(n+1))+1);
         
         % evaluate for Pn(x0)
         
@@ -55,7 +47,6 @@ function neville (file)
         for i = 1:n+1
             % when i is equal to j, set the element equal to the corresponding y value
             p(i,i) = y(i);
-            y(i)
         end
     
         % runs loop from j equal to 1 until it reaches end value
@@ -75,7 +66,9 @@ function neville (file)
         p = p(1,n+1);
 
         % Print p
-        fprintf('Pn(x0) = %.2f', p);
+        fprintf('Pn(%.2f) = %.2f', x0, p);
         
     end
+
+    clear
 end

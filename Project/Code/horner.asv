@@ -1,5 +1,4 @@
-function horner (file)
-    clear
+function horner (myFile)
 
     %FILENAME = 'TestHorner1.txt';
     %FILENAME = 'TestHorner2.txt';
@@ -8,14 +7,14 @@ function horner (file)
     FILENAME = 'TestHorner5.txt';
     
     %check if we typed in the correct file name
-    if exist (FILENAME,'file') == 1
+    if exist (myFile,'file') == 1
        disp('You typed in the wrong filename')
     else
     
         %open data file and read from it
         %replace data1 with other data files.
         
-        openData = fopen(FILENAME);
+        openData = fopen(myFile);
         data = fscanf(openData,'%f');
         fclose(openData);
     
@@ -24,7 +23,7 @@ function horner (file)
         %then xo the divider
         
         %n is the first number
-        n  = data(1) + 1;
+        n = data(1) + 1;
         
         % this is the array of coeffs
         a = zeros();
@@ -71,4 +70,6 @@ function horner (file)
             end
         end
     end
+
+    clear
 end

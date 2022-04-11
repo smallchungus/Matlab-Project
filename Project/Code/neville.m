@@ -1,21 +1,13 @@
-function neville (file)
-    clear
-
-    FILENAME = 'TestNeville1.txt';
-    %FILENAME = 'TestNeville2.txt';
-    %FILENAME = 'TestNeville3.txt';
-    %FILENAME = 'TestNeville4.txt';
-    %FILENAME = 'TestNeville5.txt';
-    
+function neville (myFile)
     %check if we typed in the correct file name
-    if exist (FILENAME,'file') == 1
+    if exist (myFile,'file') == 1
        disp('You typed in the wrong filename')
     else
     
         %open data file and read from it
         %replace data1 with other data files.
         
-        openData = fopen(FILENAME);
+        openData = fopen(myFile);
         data = fscanf(openData,'%f');
         fclose(openData);
         
@@ -70,4 +62,6 @@ function neville (file)
         fprintf('Pn(%.2f) = %.2f', x0, p);
         
     end
+
+    clear
 end

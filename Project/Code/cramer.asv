@@ -33,3 +33,5 @@ x3=det_A3/det_A;
 fprintf('x1 = %d\n',x1);
 fprintf('x2 = %d\n',x2);
 fprintf('x3 = %d\n',x3);
+
+clear
