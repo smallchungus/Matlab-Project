@@ -4,6 +4,7 @@ n=input('');
 coef=zeros([n n]);
 % constant vector
 cons=zeros([n 1]);
+
 % accept values
 for i=1:n
     for j=1:n
@@ -16,6 +17,7 @@ for i=1:n
     temp=input('');
     cons(i,1)=temp;
 end
+
 % calculations according to cramer's rule
 det_A=det(coef);
 det_A1=det([cons coef(:,2:3)]);

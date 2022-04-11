@@ -1,10 +1,10 @@
 function NewtonHorner (file)
 clear
-%FILENAME = 'NewtonHornerTest1.txt';
-%FILENAME = 'NewtonHornerTest2.txt';
-%FILENAME = 'NewtonHornerTest3.txt';
-%FILENAME = 'NewtonHornerTest4.txt';
-FILENAME = 'NewtonHornerTest5.txt';
+%FILENAME = 'TestNewtonHorner1.txt';
+%FILENAME = 'TestNewtonHorner2.txt';
+%FILENAME = 'TestNewtonHorner3.txt';
+%FILENAME = 'TestNewtonHorner4.txt';
+FILENAME = 'TestNewtonHorner5.txt';
 
 %check if we typed in the correct file name
 
@@ -80,5 +80,4 @@ else
    fprintf('No solution found within error tolerance\n');
 end
 end
-
 
