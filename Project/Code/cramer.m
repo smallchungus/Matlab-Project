@@ -1,51 +1,57 @@
 function neville (myFile)
-    %check if we typed in the correct file name
+    % Check if we typed in the correct file name
     if exist (myFile,'file') == 1
        disp('You typed in the wrong filename')
     else
     
-        %open data file and read from it
-        %replace data1 with other data files.
-        
+        % Open data file and read from it
         openData = fopen(myFile);
         data = fscanf(openData,'%f');
         fclose(openData);
 
-        % take inputs
+        % Parse inputs
 
         % Matrix size
         n = data(1);
+
         % Co-efficient matrix
         coef = zeros([n n]);
-        % Constant vector
-        cons = zeros([n 1]);
-        
-        % accept values
         for i=1:n
             for j=1:n
                 coef(i,j)=data(1 + ((i-1)*n)+j);
             end
         end
         
+        % Constant vector
+        cons = zeros([n 1]);
         for i=1:n
             cons(i,1)=data(1 + (n*n) + i);
         end
         
-        % calculations according to cramer's rule
+        % Calculate determinants according to cramer's rule
+        % det() uses Gaussian Elimination (via lu() function)
         det_A=det(coef);
         det_A1=det([cons coef(:,2:3)]);
         det_A2=det([coef(:,1) cons coef(:,3)]);
         det_A3=det([coef(:,1:2) cons]);
+
+        % Print resulting determinants
         fprintf('determinant A = %d\n',det_A);
         fprintf('determinant A1 = %d\n',det_A1);
         fprintf('determinant A2 = %d\n',det_A2);
         fprintf('determinant A3 = %d\n',det_A3);
+
+        % Calculate x1, x2, x3
         x1=det_A1/det_A;
         x2=det_A2/det_A;
         x3=det_A3/det_A;
+
+        % Print x1, x2, x3
         fprintf('x1 = %d\n',x1);
         fprintf('x2 = %d\n',x2);
         fprintf('x3 = %d\n',x3);
     end
+
+    % Clear variables for next run
     clear
 end

@@ -1,44 +1,45 @@
 function neville (myFile)
-    %check if we typed in the correct file name
+    % Inputs: 
+    %   x0-- the point at which to evaluate
+    %   n -- the degree of polynomial
+    %   x -- the matrix of the x terms of the ordered pairs
+    %   y -- the matrix of the y terms of the ordered pairs
+    % Output: 
+    %   p -- the value of the polynomial going through the n data points
+        
+    % Check if we typed in the correct file name
     if exist (myFile,'file') == 1
        disp('You typed in the wrong filename')
     else
     
-        %open data file and read from it
-        %replace data1 with other data files.
-        
+        % Open data file and read from it
         openData = fopen(myFile);
         data = fscanf(openData,'%f');
         fclose(openData);
         
-        % take input for n, xi, yi, x0
+        % Parse input:
+
+        % Parse n
         n = data(1);
         
-        % this is the array of points
+        % Parse the array of points
         x = zeros(n+1, 1);
         y = zeros(n+1, 1);
         for i = 1:n+1
            x(i) = data(2*i);
            y(i) = data((2*i)+1);
-        %  fprintf('%g ', a(i));
         end
+
+        % Parse x0
         x0 = data(1+(2*(n+1))+1);
         
-        % evaluate for Pn(x0)
-        
-        %Inputs: 
-        % x0-- the point at which to evaluate
-        % n -- the degree of polynomial
-        % x -- the matrix of the x terms of the ordered pairs
-        % y -- the matrix of the y terms of the ordered pairs
-        %Output: p -- the value of the polynomial going through the n data points
+        % Evaluate for Pn(x0):
         
         % creates the zero matrix p
         p = zeros(n+1,n+1);
     
-        % runs loop from i equals 1 until it reaches end value
+        % Set p's diagonal values to equal y's values
         for i = 1:n+1
-            % when i is equal to j, set the element equal to the corresponding y value
             p(i,i) = y(i);
         end
     
@@ -53,15 +54,13 @@ function neville (myFile)
             end
         end
     
-        % outputs the value of the polynomial going through the
-        % n data points at the point x0
-    
+        % Output the value of the polynomial going through the
+        %   n data points at the point x0
         p = p(1,n+1);
-
-        % Print p
         fprintf('Pn(%.2f) = %.2f', x0, p);
         
     end
 
+    % Clear variables for next run
     clear
 end
