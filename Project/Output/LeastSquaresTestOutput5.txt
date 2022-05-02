@@ -1,0 +1,2 @@
+The coefficients of the polynomial, separated by spaces: 
+23.397609, 32.050942, -7.864268, 0.626798, 

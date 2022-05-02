@@ -1,0 +1,1 @@
+Coefficients of n-1 polynomials. The coefficients of each polynomial in a row separated by spaces. 
