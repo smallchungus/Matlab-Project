@@ -1,0 +1,13 @@
+ans =
+
+  563.2148
+
+
+     Inline function:
+     f(x) = x^4
+
+     0
+
+     5
+
+    10

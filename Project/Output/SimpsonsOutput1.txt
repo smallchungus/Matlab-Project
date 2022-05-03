@@ -1,0 +1,13 @@
+ans =
+
+  153.2448
+
+
+     Inline function:
+     f(x) = x^3
+
+     1
+
+     5
+
+    20

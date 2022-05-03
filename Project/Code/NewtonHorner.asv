@@ -72,7 +72,8 @@ function NewtonHorner (myFile)
            end
         end
         
-        % Print solution if
+        
+        % Print solution if applicable
         if flag == true
            fprintf('Root: %f\n',currentRoot);
         else
